@@ -1,0 +1,61 @@
+{
+    "friedProducts": [
+        {
+            "nome": "enroladinho",
+            "price": 4.50,
+            "description": "Enroladinhos de salsicha e enroladinhos de frango com requeijão"
+        },
+        {
+            "nome": "coxinha",
+            "price": 4.50,
+            "description": "Coxinhas de queijo e presunto e coxinhas tradicionais com catupity"
+        },
+        {
+            "nome": "pastel",
+            "price": 4.50,
+            "description": "Pastel nos sabores de carne, queijo e pizza"
+        },
+        {
+            "nome": "risole",
+            "price": 4.50,
+            "description": "Risoles de carne, queijo e presunto e frango disponíveis"
+        },
+        {
+            "nome": "cento-salgado",
+            "price": 44.50,
+            "description": "Cento de salgado variado para encomendar"
+        }
+    ],
+    "frozenProducts": [
+        {
+            "nome": "enroladinho-Congelado",
+            "price": 4.50,
+            "description": "Enroladinhos de salsicha e enroladinhos de frango com requeijão"
+        },
+        {
+            "nome": "coxinha-Congelada",
+            "price": 4.50,
+            "description": "Coxinhas de queijo e presunto e coxinhas tradicionais com catupity"
+        },
+        {
+            "nome": "risole-Congelado",
+            "price": 4.50,
+            "description": "Risoles de carne, queijo e presunto e frango disponíveis"
+        },
+        {
+            "nome": "cento-pastelzinho-congelado",
+            "price": 4.50,
+            "description": "Risoles de carne, queijo e presunto e frango disponíveis"
+        },
+        {
+            "nome": "cento-disco-congelado",
+            "price": 4.50,
+            "description": "Risoles de carne, queijo e presunto e frango disponíveis"
+        },
+        {
+            "nome": "cento-variados",
+            "price": 4.50,
+            "description": "Risoles de carne, queijo e presunto e frango disponíveis"
+        }
+    ]
+}
