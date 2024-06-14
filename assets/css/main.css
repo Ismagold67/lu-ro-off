@@ -7,9 +7,6 @@
 
 }
 
-body{
-    height: 100vh;
-}
 
 .header {
     width: 100%;
@@ -19,6 +16,7 @@ body{
     background-blend-mode: color-burn;
     background-size: 40%;
     position: relative;
+    display: flex;
 }
 
 
@@ -31,34 +29,37 @@ body{
     position: absolute;
 }
 
-.navbar .logo, .menu, .icons {
+/* .navbar .logo, .menu, .icons {
     height: 100%;
 }
 
 .logo, .icons{
     width: 25%;
-}
+} */
 
 .logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 .logo img{
-    max-width: 40%;
+    max-width: 20%;
     filter: drop-shadow(1px 1px 2.1px #000);
 }
 
 .menu {
-    width: 50%;
+    width: 80%;
 }
 .menu ul{
     display: flex;
     height: 100%;
     align-items: center;
+    justify-content: end;
     gap: 3rem;
     list-style: none;
+    padding-right: 10rem;
 }
 
 .menu ul li a:hover{
@@ -77,7 +78,7 @@ body{
     transition: .5s;
 }
 
-.icons{
+/* .icons{
     display: flex;
     align-items: center;
     gap: 1.3rem;
@@ -91,26 +92,27 @@ body{
     padding: 5px;
     border-radius: 10px;
     transition: .5s;
-}
+} */
 
 .presentMsg{
     width: 40%;
     position: absolute;
     top: 12rem;
     left: 5rem;
+    z-index: 1;
     color: var(--russet-brown);
     font-size: 25px;
     text-shadow: 1px 1px 1px var(--ember-orange);
 }
 
-.icons i:hover{
+/* .icons i:hover{
     color: var(--russet-brown);
     transition: .5s;
     cursor: pointer;
     background-color: var(--sunlit-gold);
     padding: 5px;
     border-radius: 10px;
-}
+} */
 
 #cento{
     max-width: 52%;
@@ -127,12 +129,12 @@ body{
     background-image: url(../images/bk-main06.png);
     background-size: 120%;
     position: absolute;
+    z-index: 0;
     bottom: 0;
 }
 
 .presentation{
     width: 100%;
-    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,6 +146,7 @@ body{
     height: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .split-page2{
@@ -175,14 +178,16 @@ body{
 main{
     width: 100%;
     height: 1200px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
     position: relative;
     background: linear-gradient(var(--goldenrod-blaze) 0%, var(--sunlit-gold) 50% , var(--fiery-orange) 100%) ;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .container__our-products{
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,7 +195,6 @@ main{
 
 .content-our-products{
     width: 80%;
-    height: 75%;
     position: absolute;
     text-align: center;
     display: flex;
@@ -205,8 +209,8 @@ main{
 }
 
 .container__our-products input{
-    width: 60px;
-    height: 30px;
+    width: 4rem;
+    height: 2rem;
     appearance: none;
     border-radius: 30px;
     background-color: var(--russet-brown);
@@ -233,7 +237,7 @@ main{
 }
 
 .choseProduct{
-    width: 30%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,13 +247,14 @@ main{
 }
 
 .products{
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     color: #fff;
+    background: linear-gradient(var(--goldenrod-blaze) 0%, var(--sunlit-gold) 50% , var(--fiery-orange) 100%) ;
 }
 
 .product {
@@ -259,6 +264,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
 
 .product img{
@@ -306,17 +312,18 @@ main{
 
 #price{
     font-size: 25px;
-    color: var(--russet-brown);
+    color: #fff;
     font-weight: 900;
 }
 
 #sp2{
     background-image: url(../images/bk-main06\ -\ Copia.png);
+    position: absolute;
+    bottom: -50px;
 }
 
 footer{
     width: 100%;
-    height: 45vh;
     display: flex;
     position: relative;
     background-color: var(--russet-brown);
@@ -352,17 +359,9 @@ footer{
 }
 
 
-.logo-footer img{
-    max-width: 39%;
+.contact-footer img{
+    max-width: 120px;
     margin-top: -1rem;
-    position: absolute;
-    top: 0;
-    filter: drop-shadow(1px 1px 2.1px #000);
-}
-
-.logo-footer p{
-    position: absolute;
-    bottom: .1rem;
 }
 
 .contact-footer{
@@ -413,8 +412,8 @@ footer{
     width: 94%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 8rem 1rem 8rem;
+    padding: 1.2rem;
+    justify-content: center;
     color: #fff;
     border-top: 1px solid white;
 }
@@ -431,4 +430,145 @@ footer{
 ::-webkit-scrollbar-thumb{
     border-radius: 15px;
     background-color: var(--russet-brown);
+}
+
+@media screen and (max-width: 1060px) {
+    .split-page {
+        bottom: -100px;
+    }
+    main {
+        height: 100rem;
+    }
+    #sp2{
+        bottom: -5rem;
+    }
+    header h1{
+        font-size: 1.7rem;
+    }
+    .content-presentation {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .content-presentation .service {
+        width: 45%;
+    }
+    .logo img {
+        max-width: 35%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        height: 130rem;
+    }
+    #sp2 {
+        bottom: -10rem;
+    }
+    .split-page2 {
+        top: -130px;
+    }
+    .split-page {
+        bottom: -130px;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .presentMsg {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5rem;
+        width: 70%;
+        top: 1rem;
+        left: 0;
+        text-align: center;
+    }
+    #cento {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 3rem;
+        right: 0;
+    }
+    .menu ul{
+        gap: 2rem;
+        padding-left: 1px;
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+    .menu a {
+        padding: 0;
+    }
+    footer {
+        font-size: 10px;
+    }
+    .container-footer p, a, span{
+        font-size: 15px;
+        text-align: center;
+    }
+    .choseProduct p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-footer p, span{
+            width: 250px;
+    }
+    .contact-footer {
+        justify-content: space-around;
+    }
+    .content-presentation .service {
+        width: 90%;
+    }
+    .content-our-products h1{
+        font-size: 50px;
+    }
+    .split-page {
+        bottom: -13rem;
+    }
+    #sp2 {
+        bottom: -12rem;
+    }
+    .menu {
+        width: 100%;
+    }
+    .menu ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        position: absolute;
+        width: 100%;
+        top: 2.7rem;
+    }
+    .logo img {
+        max-width: 80px;
+    }
+    .presentMsg  {
+        width: 90%;
+    }
+    .presentMsg p {
+        font-size: 20px;
+    }
+    .menu ul li a{
+        font-size: 0.8rem;
+    }
+    .container__our-products input {
+        width: 10rem;
+    }
+    #ifood {
+        max-width: 52%;
+    }
+    .rodape p{
+        text-align: center;
+    }
 }
