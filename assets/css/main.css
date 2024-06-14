@@ -136,19 +136,11 @@
 #sp2{
     background-image: url(../images/bk-main06\ -\ Copia.png);
     position: absolute;
-    bottom:0;
+    bottom:20rem;
     width: 100%;
-    height: 40vh;
-    background-size: 120%;
+    height: 20%;
+    background-position: 50%;
 }
-.presentation{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
 .split-page2{
     background-image: url(../images/bk-main06.png);
     width: 100%;
@@ -158,6 +150,14 @@
     top: 0;
     background-position: 50%;
 }
+.presentation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .content-presentation{
     width: 85%;
     height: 50%;
@@ -262,7 +262,6 @@ main{
     gap: 20px;
     flex-wrap: wrap;
     color: #fff;
-    background: linear-gradient(var(--goldenrod-blaze) 0%, var(--sunlit-gold) 50% , var(--fiery-orange) 100%) ;
 }
 
 .product {
@@ -463,9 +462,6 @@ footer{
 @media screen and (max-width: 720px) {
     main {
         height: 130rem;
-    }
-    #sp2 {
-        bottom: -10rem;
     }
     .split-page2 {
         top: -130px;
