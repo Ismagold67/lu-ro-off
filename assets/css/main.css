@@ -144,7 +144,7 @@
 .split-page2{
     background-image: url(../images/bk-main06.png);
     width: 100%;
-    height: 55vh;
+    height: 40vh;
     transform: rotate(180deg);
     position: absolute;
     top: 0;
