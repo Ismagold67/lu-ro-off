@@ -29,14 +29,6 @@
     position: absolute;
 }
 
-/* .navbar .logo, .menu, .icons {
-    height: 100%;
-}
-
-.logo, .icons{
-    width: 25%;
-} */
-
 .logo{
     display: flex;
     align-items: center;
@@ -77,22 +69,6 @@
     border-radius: 10px;
     transition: .5s;
 }
-
-/* .icons{
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-    font-size: 25px;
-    color: #fff;
-    justify-content: right;
-    padding-right: 3rem;
-}
-
-.icons i{
-    padding: 5px;
-    border-radius: 10px;
-    transition: .5s;
-} */
 
 .presentMsg{
     width: 40%;
@@ -535,10 +511,10 @@ footer{
     .logo {
         position: absolute;
         width: 100%;
-        top: 2.7rem;
+        top: 3.5rem;
     }
     .logo img {
-        max-width: 80px;
+        max-width: 100px;
     }
     .presentMsg  {
         width: 90%;
