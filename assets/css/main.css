@@ -132,21 +132,21 @@
     z-index: 0;
     bottom: 0;
 }
-
+    
+#sp2{
+    background-image: url(../images/bk-main06\ -\ Copia.png);
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 40vh;
+    background-size: 120%;
+}
 .presentation{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.content-presentation{
-    width: 85%;
-    height: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .split-page2{
@@ -158,6 +158,14 @@
     top: 0;
     background-position: 50%;
 }
+.content-presentation{
+    width: 85%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .content-presentation .service{
     height: 100%;
     width: 24%;
@@ -316,11 +324,6 @@ main{
     font-weight: 900;
 }
 
-#sp2{
-    background-image: url(../images/bk-main06\ -\ Copia.png);
-    position: absolute;
-    bottom: -50px;
-}
 
 footer{
     width: 100%;
@@ -530,7 +533,7 @@ footer{
         width: 90%;
     }
     .content-our-products h1{
-        font-size: 50px;
+        font-size: 30px;
     }
     .split-page {
         bottom: -13rem;
