@@ -8,3 +8,20 @@
     box-sizing: border-box;
     font-family: "Radiante", sans-serif;
 }
+
+.fa-instagram:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+.fa-facebook:hover {
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

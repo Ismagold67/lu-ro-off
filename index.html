@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/e829e347c9.js" crossorigin="anonymous"></script>
     <title>Salgados Lu&Ro</title>
 </head>
-<body>
+<body id="home">
     <header class="header" id="gradient">
         <div class="navbar">
             <div class="logo">
@@ -21,23 +21,26 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre Nós</a></li>
-                    <li><a href="">Nossos Produtos</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#prod">Nossos Produtos</a></li>
                 </ul>
             </div>
-            <!-- <div class="icons">
-                <i class='bx bx-cart'></i>
-                <i class='bx bx-user'></i>
-                <i class='bx bx-search'></i>
-            </div> -->
+            <div class="navbar__mobile">
+                <img src="assets/images/menuu.png" alt="menu" class="burguer" />
+                <ul class="mobile__links">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#servicos">Serviços</a></li>
+                  <li><a href="#prod">Produtos</a></li>
+                </ul>
+            </div>
         </div>
         <div class="presentMsg">
             <h1>O MELHOR SALGADO <br> DA CIDADE!</h1>
             <p>Explore o sabor autêntico na Lu&Ro, onde cada salgado é uma deliciosa experiência. Nossa loja é dedicada a oferecer uma variedade irresistível de salgados frescos e feitos com ingredientes de qualidade.</p>
         </div>
         <img id="cento" src="assets/images/cento-salgadpo.png" alt="cento-salgado">
-        <div class="split-page"></div>
+        <div class="split-page" id="servicos"></div>
     </header>
     <div class="presentation">
         <div class="content-presentation">
@@ -63,7 +66,7 @@
         </div>
     </div>
     <main>
-        <div class="split-page2"></div>
+        <div class="split-page2" id="prod" ></div>
         <div class="container__our-products">
             <div class="content-our-products">
                 <h1>Nossos Produtos</h1>

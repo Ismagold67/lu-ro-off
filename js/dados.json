@@ -13,7 +13,7 @@
         {
             "nome": "pastel",
             "price": 4.50,
-            "description": "Pastel nos sabores de carne, queijo e pizza"
+            "description": "Pastéis fritos nos sabores de carne, queijo, pizza e frango com catupiry"
         },
         {
             "nome": "risole",
@@ -23,7 +23,7 @@
         {
             "nome": "cento-salgado",
             "price": 44.50,
-            "description": "Cento de salgado variado para encomendar"
+            "description": "Cento de salgados variados para pedir por encomenda"
         }
     ],
     "frozenProducts": [

@@ -23,10 +23,11 @@
 .header .navbar {
     width: 100%;
     height: 10%;
-    top: 2rem;
+    top: 0;
     display: flex;
     background: linear-gradient(var(--russet-brown)0%, var(--ember-orange) 80%, var(--fiery-orange) 100%);
-    position: absolute;
+    position: fixed;
+    z-index: 2;
 }
 
 .logo{
@@ -37,8 +38,10 @@
 }
 
 .logo img{
-    max-width: 20%;
+    max-width: 8%;
+    top: 0;
     filter: drop-shadow(1px 1px 2.1px #000);
+    position: absolute;
 }
 
 .menu {
@@ -230,7 +233,7 @@ main{
 }
 
 .products{
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,6 +388,10 @@ footer{
 #ifood{
     max-width: 10%;
 }
+#ifood:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 .rodape {
     width: 94%;
     display: flex;
@@ -429,9 +436,9 @@ footer{
     .content-presentation .service {
         width: 45%;
     }
-    .logo img {
+    /* .logo img {
         max-width: 35%;
-    }
+    } */
 }
 
 @media screen and (max-width: 720px) {
@@ -514,7 +521,9 @@ footer{
         top: 3.5rem;
     }
     .logo img {
-        max-width: 100px;
+        max-width: 27%;
+        top: -3.5rem;
+        left: 1rem;
     }
     .presentMsg  {
         width: 90%;
@@ -535,3 +544,54 @@ footer{
         text-align: center;
     }
 }
+
+.navbar__mobile {
+    display: none;
+}
+  
+.mobile__links {
+    display: none;
+  }
+
+@media only screen and (max-width: 768px) {
+    .navbar__mobile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+  
+    .navbar__mobile img {
+      width: 3.6rem;
+      height: 3.6rem;
+      cursor: pointer;
+    }
+  
+    .navbar__mobile.active .mobile__links {
+      display: flex;
+      flex-direction: column;
+      background-color: #f2b705f1;
+      width: 100%;
+      position: absolute;
+      top: 98%;
+      right: 0;
+      padding: 1rem 0;
+      box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.1);
+      z-index: -1;
+    }
+  
+    .navbar__mobile.active .mobile__links li {
+      margin-right: 0;
+    }
+  
+    .navbar__mobile.active .mobile__links li a {
+      padding: 1rem;
+      display: block;
+      text-align: center;
+      color: #8C1D04;
+      font-weight: bolder;
+    }
+  }

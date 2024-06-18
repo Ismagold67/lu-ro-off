@@ -1,5 +1,8 @@
 const products = document.querySelector('.products');
 const choseProductInput = document.querySelector('.choseProduct input')
+const faInstagram = document.querySelector('.fa-instagram')
+const faFacebook = document.querySelector('.fa-facebook')
+const faIfood = document.querySelector('#ifood')
 let cont = 0;
 const prods = [
     './assets/images/enroladinho.png',
@@ -38,8 +41,38 @@ function x(){
     document.querySelector('header').style.backgroundPosition=cont+"px";
 }
 
+function navMobile() {
+    document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.querySelector('.navbar');
+        const mobileNavbar = document.querySelector('.navbar__mobile');
+        const button = document.querySelector('.burguer');
+      
+        button.addEventListener('click', function () {
+          mobileNavbar.classList.toggle('active');
+        });
+      
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 0) {
+            navbar.classList.add('active');
+          } else {
+            navbar.classList.remove('active');
+          }
+        });
+      });
+}
+
 function init(){
     setInterval(x, 15);
+    faInstagram.addEventListener('click', () => {
+        window.location.href = 'https://www.instagram.com/luerosalgados/?igshid=NTc4MTIwNjQ2YQ%3D%3D'
+    })
+    faFacebook.addEventListener('click', () => {
+        window.location.href = 'https://www.facebook.com/luerosalgados?mibextid=ZbWKwL'
+    })
+    faIfood.addEventListener('click', () => {
+        window.location.href = 'https://www.ifood.com.br/delivery/porto-velho-ro/luro-salgados-costa-e-silva/da31c9bc-c68b-428a-9429-e706d2f178c2?UTM_Medium=share'
+    })
+    navMobile()
     creationDivsWithImagesDinamic(prods, products, 'product');
     choseProductInput.addEventListener("click", event => {
         const friedProducts = products.querySelectorAll('.product')
