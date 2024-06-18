@@ -436,9 +436,9 @@ footer{
     .content-presentation .service {
         width: 45%;
     }
-    /* .logo img {
-        max-width: 35%;
-    } */
+    .logo img {
+        max-width: 15%;
+    }
 }
 
 @media screen and (max-width: 720px) {
