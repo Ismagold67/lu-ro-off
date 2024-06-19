@@ -49,17 +49,17 @@
         },
         {
             "nome": "cento-pastelzinho-congelado",
-            "price": 4.50,
+            "price": 50,
             "description": "Risoles de carne, queijo e presunto e frango disponíveis"
         },
         {
             "nome": "cento-disco-congelado",
-            "price": 4.50,
+            "price": 45,
             "description": "Risoles de carne, queijo e presunto e frango disponíveis"
         },
         {
             "nome": "cento-variados",
-            "price": 4.50,
+            "price": 45,
             "description": "Risoles de carne, queijo e presunto e frango disponíveis"
         }
     ]
