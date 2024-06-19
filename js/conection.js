@@ -44,9 +44,9 @@ function creationDinamicContent(prod, element){
     span.id = 'price';
 
     if(priceInt < 5) {
-        span.innerHTML = `R$ ${priceInt.replace('.', ',')} <span style="font-size:12px">(acima de 10 und R$ 2,50 cada)</span>`;
+        span.innerHTML = `R$ ${priceInt.replace('.', ',')} <br> <span style="font-size:12px">(acima de 10 und R$ 2,50 cada)</span>`;
     } else {
-        span.innerHTML = `R$ ${priceInt.replace('.', ',')}`;
+        span.innerHTML = `R$ ${priceInt.replace('.', ',')}<br> <span>ㅤㅤㅤ</span>` ;
     }
     
     element.appendChild(h3);
