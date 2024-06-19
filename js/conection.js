@@ -39,12 +39,21 @@ function creationDinamicContent(prod, element){
     const span = document.createElement('span');
     const priceInt = parseFloat(JSON.parse(prod.price)).toFixed(2);
     const nome = prod.nome[0].toUpperCase();
-    h3.textContent = prod.nome.replace(prod.nome[0], nome).replace('-', ' ');
+    h3.textContent = prod.nome.replace(prod.nome[0], nome).replace('-', ' ').replace('_', ' ');
     p.textContent = prod.description;
     span.id = 'price';
-    span.innerHTML = `R$ ${priceInt.replace('.', ',')}`;
+
+    if(priceInt < 5) {
+        span.innerHTML = `R$ ${priceInt.replace('.', ',')} <span style="font-size:12px">(acima de 10 und R$ 2,50 cada)</span>`;
+    } else {
+        span.innerHTML = `R$ ${priceInt.replace('.', ',')}`;
+    }
+    
     element.appendChild(h3);
     element.appendChild(p);
     element.appendChild(span);
+    console.log(span.textContent.includes('50,00'))
+
+
 }
 showFried();

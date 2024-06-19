@@ -10,7 +10,7 @@ const prods = [
     './assets/images/coxinha.jpg',
     './assets/images/pastel.png',
     './assets/images/cento-salgado.jpg',
-    './assets/images/pastelzinho.jpeg'
+    './assets/images/Cento_Pastelzinho.jpg'
 ];
 
 const frozenProds = [

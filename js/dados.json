@@ -22,7 +22,12 @@
         },
         {
             "nome": "cento-salgado",
-            "price": 44.50,
+            "price": 45,
+            "description": "Cento de salgados variados para pedir por encomenda"
+        },
+        {
+            "nome": "Cento_Pastel",
+            "price": 50,
             "description": "Cento de salgados variados para pedir por encomenda"
         }
     ],
