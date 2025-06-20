@@ -4,6 +4,8 @@ const faInstagram = document.querySelector('.fa-instagram')
 const faFacebook = document.querySelector('.fa-facebook')
 const faIfood = document.querySelector('#ifood')
 let cont = 0;
+
+//Lista contendo os caminhos para as imagens de salgados fritos
 const prods = [
     './assets/images/enroladinho.png',
     './assets/images/risole.jpg',
@@ -13,6 +15,7 @@ const prods = [
     './assets/images/Cento_Pastelzinho.jpg'
 ];
 
+// Lista contendo os caminhos para as imagens de salgados congelados crus
 const frozenProds = [
     './assets/images/enroladinho-Congelado.jpg',
     './assets/images/coxinha-Congelada.jpeg',
@@ -22,75 +25,71 @@ const frozenProds = [
     './assets/images/cento-variados.jpg',
 ]
 
-function creationDivsWithImagesDinamic(prods, products, classImage){
-    for(i = 0; i < prods.length; i++){
-        const div = document.createElement('div');
-        const img = document.createElement('img');
-    
-        div.classList.add(classImage);
-        img.src = prods[i];
-    
-        div.appendChild(img);
-        products.appendChild(div);
-    }
+// Função para criar dinamicamente os elementos de produto (div + img)
+function creationDivsWithImagesDinamic(prods, classImage) {
+    products.innerHTML = ''; // Limpa os produtos já existentes no container
+
+    prods.forEach(src => {
+        const div = document.createElement('div'); // Cria um contêiner para cada produto
+        const img = document.createElement('img'); // Cria a imagem do produto
+        img.src = src; // Define o caminho da imagem
+        img.alt = classImage; // Adiciona uma descrição alternativa (boa prática de acessibilidade)
+
+        div.classList.add(classImage); // Adiciona a classe (usada para identificar o tipo)
+        div.appendChild(img); // Coloca a imagem dentro da div
+        products.appendChild(div); // Adiciona a div ao container principal
+    });
 }
 
-
-function x(){
-    cont++;
-    document.querySelector('header').style.backgroundPosition=cont+"px";
+// Função que anima o plano de fundo do header com deslocamento constante
+function animateHeaderBackground() {
+    cont++; // Incrementa a posição
+    document.querySelector('header').style.backgroundPosition = `${cont}px`; // Aplica a posição
 }
 
-function navMobile() {
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.querySelector('.navbar');
-        const mobileNavbar = document.querySelector('.navbar__mobile');
-        const button = document.querySelector('.burguer');
-      
-        button.addEventListener('click', function () {
-          mobileNavbar.classList.toggle('active');
-        });
-      
-        window.addEventListener('scroll', function () {
-          if (window.pageYOffset > 0) {
-            navbar.classList.add('active');
-          } else {
-            navbar.classList.remove('active');
-          }
-        });
-      });
+// Função para ativar o menu mobile e trocar a classe da navbar ao rolar a página
+function setupNavMobile() {
+    const navbar = document.querySelector('.navbar');
+    const mobileNavbar = document.querySelector('.navbar__mobile');
+    const button = document.querySelector('.burguer');
+
+    // Ativa/desativa o menu mobile ao clicar no botão do hambúrguer
+    button.addEventListener('click', () => {
+        mobileNavbar.classList.toggle('active');
+    });
+
+    // Adiciona/remover classe na navbar ao rolar a página
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('active', window.pageYOffset > 0);
+    });
 }
 
-function init(){
-    setInterval(x, 15);
-    faInstagram.addEventListener('click', () => {
-        window.location.href = 'https://www.instagram.com/luerosalgados/?igshid=NTc4MTIwNjQ2YQ%3D%3D'
-    })
-    faFacebook.addEventListener('click', () => {
-        window.location.href = 'https://www.facebook.com/luerosalgados?mibextid=ZbWKwL'
-    })
-    faIfood.addEventListener('click', () => {
-        window.location.href = 'https://www.ifood.com.br/delivery/porto-velho-ro/luro-salgados-costa-e-silva/da31c9bc-c68b-428a-9429-e706d2f178c2?UTM_Medium=share'
-    })
-    navMobile()
-    creationDivsWithImagesDinamic(prods, products, 'product');
-    choseProductInput.addEventListener("click", event => {
-        const friedProducts = products.querySelectorAll('.product')
-        const frozenProduct = products.querySelectorAll('.FrozenProduct')
-        if(event.target.checked){
-            creationDivsWithImagesDinamic(frozenProds, products, 'FrozenProduct')
-            showFrozen();
-            friedProducts.forEach((fried) => {
-                fried.style.display = 'none'
-            })
+// Função que define o comportamento dos ícones de redes sociais
+function setupSocialLinks() {
+    faInstagram.onclick = () => window.location.href = 'https://www.instagram.com/luerosalgados/?igshid=NTc4MTIwNjQ2YQ%3D%3D';
+    faFacebook.onclick = () => window.location.href = 'https://www.facebook.com/luerosalgados?mibextid=ZbWKwL';
+    faIfood.onclick = () => window.location.href = 'https://www.ifood.com.br/delivery/porto-velho-ro/luro-salgados-costa-e-silva/da31c9bc-c68b-428a-9429-e706d2f178c2?UTM_Medium=share';
+}
+
+// Função principal que inicializa toda a lógica da página
+function init() {
+    setInterval(animateHeaderBackground, 15); // Inicia a animação do background do header
+    setupSocialLinks(); // Ativa os links das redes sociais
+    setupNavMobile();   // Ativa a navegação responsiva
+
+    creationDivsWithImagesDinamic(prods, 'product'); // Carrega os produtos fritos inicialmente
+
+    // Evento para alternar entre produtos fritos e congelados ao clicar no input
+    choseProductInput.addEventListener("click", (event) => {
+        if (event.target.checked) {
+            // Se marcado, mostra os congelados
+            creationDivsWithImagesDinamic(frozenProds, 'FrozenProduct');
         } else {
-            creationDivsWithImagesDinamic(prods, products, 'product')
-            showFried();
-            frozenProduct.forEach((frozen) => {
-                frozen.style.display = 'none'
-            })
+            // Se desmarcado, volta a mostrar os fritos
+            creationDivsWithImagesDinamic(prods, 'product');
         }
-    })
+    });
 }
 
+// Chamada da função principal para iniciar tudo
 init();
